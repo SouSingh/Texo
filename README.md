@@ -53,3 +53,15 @@ text = "In literary theory, a text is any object that can be  whether this objec
 summary = x.summary(text, num_bullet_points=10)
 print(summary)
 ```
+
+
+Unet for Image
+
+```python
+from Texo.Unet import UnetM
+im = UnetM()
+im.Imageprepocess('image_path')
+
+#Display image
+im.show()
+```
