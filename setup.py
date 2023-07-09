@@ -9,7 +9,7 @@ with open("README.md","r") as fh:
 
 setup(
     name='Texo',
-    version='0.0.2',
+    version='0.0.4',
     description='Sentiment Analysis Multiple language and for all products',
     author='Sourabh singh',
     author_email='Sourabh52.singh@gmail.com',
@@ -23,7 +23,7 @@ setup(
         'transformers',
         'translate',
     ],
-    keywords=['python', 'Sentiment', 'NLP', 'Tokenizer', 'Text-Analyzer', 'sockets'],
+    keywords=['python', 'Sentiment', 'NLP', 'Tokenizer', 'Text-Analyzer', 'sockets','torch', 'PIL', 'torchvision'],
     classifiers=[
         'Development Status :: 5 - Production/Stable',
         'Intended Audience :: Developers',

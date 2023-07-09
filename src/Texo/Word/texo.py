@@ -5,10 +5,7 @@ class tex():
 
     def __init__(self):
         self.x = 10
-    
-    def stop_words(self, text):
-          # Define a set of stop words
-       stop_words = {
+        self.stop_words = {
     'a', 'an', 'and', 'the', 'in', 'on', 'is', 'are', 'it', 'of', 'to', 'that', 'this', 'with',
     'for', 'as', 'at', 'by', 'from', 'or', 'not', 'but', 'be', 'was', 'were', 'am', 'has', 'have',
     'had', 'can', 'could', 'will', 'would', 'should', 'you', 'he', 'she', 'they', 'we', 'your', 'their',
@@ -59,12 +56,13 @@ class tex():
     'within', 'without', 'wont', 'would', 'wouldn', 'wouldnt', 'yes', 'yet', 'you', 'youd', 'youll',
     'youre', 'youve', 'your', 'yours', 'yourself', 'yourselves', 'zero'
        }
-
-
+    
+    def stop_words(self, text):
+          # Define a set of stop words
         # Split the text into words
        words = text.lower().split()
        # Find stop words in the text
-       stop_words_found = [word for word in words if word in stop_words]
+       stop_words_found = [word for word in words if word in self.stop_words]
 
        return stop_words_found
 
@@ -90,3 +88,54 @@ class tex():
          summary += f"\u2022 {sorted_sentences[i]}\n"  # Add a bullet point to the sentence
     
       return summary
+
+    def tokenize(self, text):
+      tokens = []
+      
+      current_token = ""
+      for char in text:
+          if char.isalnum():
+            current_token += char
+          elif current_token:
+            tokens.append(current_token)
+            current_token = ""
+      if current_token:
+             tokens.append(current_token)
+      return tokens
+   
+    def tokenize_stopwords(self, text):  # Example list of stop words
+       tokens = []
+       current_token = ""
+       for char in text:
+         if char.isalnum():
+            current_token += char
+         elif current_token:
+            if current_token.lower() not in self.stop_words:  # Check if token is not a stop word
+                tokens.append(current_token)
+            current_token = ""
+       if current_token:
+         if current_token.lower() not in self.stop_words:
+            tokens.append(current_token)
+       return tokens
+
+    def pos_tag(tokens):
+     pos_tags = {}
+    
+     for token in tokens:
+        # Define your rules or logic to assign POS tags here
+        if token.endswith("ing"):
+            pos_tags[token] = "VERB"
+        elif token.endswith("ed"):
+            pos_tags[token] = "VERB"
+        elif token.endswith("s") or token.endswith("es"):
+            pos_tags[token] = "NOUN"
+        elif token.isnumeric():
+            pos_tags[token] = "NUM"
+        else:
+            pos_tags[token] = "NOUN"
+    
+     return pos_tags
+
+    
+
+

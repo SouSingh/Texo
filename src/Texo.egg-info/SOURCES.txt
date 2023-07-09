@@ -1,0 +1,8 @@
+README.md
+setup.py
+src/Texo/Unet.py
+src/Texo.egg-info/PKG-INFO
+src/Texo.egg-info/SOURCES.txt
+src/Texo.egg-info/dependency_links.txt
+src/Texo.egg-info/requires.txt
+src/Texo.egg-info/top_level.txt

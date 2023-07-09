@@ -1,3 +1,21 @@
+Metadata-Version: 2.1
+Name: Texo
+Version: 0.0.4
+Summary: Sentiment Analysis Multiple language and for all products
+Home-page: https://github.com/Sourabh20022002/Texo
+Download-URL: https://github.com/Sourabh20022002/Texo/archive/refs/tags/python.tar.gz
+Author: Sourabh singh
+Author-email: Sourabh52.singh@gmail.com
+Keywords: python,Sentiment,NLP,Tokenizer,Text-Analyzer,sockets,torch,PIL,torchvision
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
+
 # Texo
 
 Under construction! Not ready for use yet! Currently experimenting and planning!
